@@ -20,7 +20,6 @@ praw_client_secret = os.environ.get("RA_Client_Secret")
 praw_user_agent = os.environ.get("RA_User_Agent")
 
 
-
 # Authorized Reddit Instance.
 reddit = praw.Reddit(client_id = praw_client_id,
                      client_secret = praw_client_secret,
@@ -37,9 +36,7 @@ reddit.read_only = True
 # Obtaining a Subreddit Instance.
 subreddit = reddit.subreddit("OnePiece")
 
-print(subreddit.display_name)
-#print(subreddit.title)
-#print(subreddit.description)
+print(subreddit.display_name, subreddit.title, subreddit.description)
 
 
 # Submission Instances.

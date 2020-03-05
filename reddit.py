@@ -1,4 +1,5 @@
 #! python3
+import os
 import praw
 import pandas as pd
 import datetime as dt
@@ -10,10 +11,20 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
+# Environment Variables.
+ra_user = os.environ.get("RA_User")
+ra_password = os.environ.get("RA_Password")
+praw_client_id = os.environ.get("RA_Client_Id")
+praw_client_secret = os.environ.get("RA_Client_Secret")
+praw_user_agent = os.environ.get("RA_User_Agent")
+
+
+
 # Authorized Reddit Instance.
-reddit = praw.Reddit(client_id = "sBN4Jdmt-vQAcQ",
-                     client_secret = "bHRdlwVT1d2Md7WMoRUWvcesMBo",
-                     user_agent = "rpro1",
+reddit = praw.Reddit(client_id = praw_client_id,
+                     client_secret = praw_client_secret,
+                     user_agent = praw_user_agent,
                      )
 
 
@@ -77,8 +88,8 @@ op_data.to_csv("ONEPIECE SCRAPES.csv", index = False)
 SUBJECT = 'Daily Reddit Scrape'
 FILENAME = 'ONEPIECE SCRAPES.csv'
 FILEPATH = './ONEPIECE SCRAPES.csv'
-MY_EMAIL = 'bot_test17@yahoo.com'
-MY_PASSWORD = 'Coding17'
+MY_EMAIL =
+MY_PASSWORD =
 TO_EMAIL = 'louieviray017@yahoo.com'
 SMTP_SERVER = 'Smtp.mail.yahoo.com'
 SMTP_PORT = 465

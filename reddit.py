@@ -48,11 +48,6 @@ for submission in reddit.subreddit("OnePiece").hot(limit = 10):
           submission.url
           )
 
-
-# WORK ON SCRAPING AND SAVING/LOADING SCRAPED DATA IN JSON FORMAT SOON!
-# March 1, 2020 Work Continues.
-
-
 op_dict = {
     "Title": [], \
     "Score": [], \
@@ -109,5 +104,3 @@ smtpObj.starttls()
 smtpObj.login(MY_EMAIL, MY_PASSWORD)
 smtpObj.sendmail(MY_EMAIL, TO_EMAIL, msg.as_string())
 smtpObj.quit()
-
-# Email CSV File to recipient function does not work.
